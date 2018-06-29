@@ -11,7 +11,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-			DB::table('wakamonos')->insert([
+			DB::table('masochists')->insert([
 
 			]);
     }

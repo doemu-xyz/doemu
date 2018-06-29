@@ -4,33 +4,33 @@
 <div class="container">
     <div class="row justify-content-center">
         <div id="accordion" class="col-md-8">
-											@if (isset($wakamono))
+											@if (isset($masochist))
 											<div class="alert alert-primary" role="alert">
 												既に投稿済みです。更新することができます。
 											</div>
 											@endif
             <div class="card my-4">
-								<div id="headingReg" class="card-header">若者として投稿する(若者向け)
+								<div id="headingReg" class="card-header">マゾヒストとして投稿する(マゾヒスト向け)
 									<!-- <h5 class="mb-0">
 									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#reg" aria-expanded="false" aria-controls="reg">自分も投稿する</button>
 									</h5> -->
 								</div>
                 <div id="reg" class="card-body" aria-labelledby="headingReg" data-parent="#accordion">
 									@auth
-										<form method="POST" action="{{ route('young') }}">
+										<form method="POST" action="{{ route('masochists') }}">
 											{{ csrf_field() }}
 											<div class="form-group">
 												<label>自分の年齢</label>
-												<input type="text" class="form-control" name="old" value="{{ isset($wakamono) ? $wakamono->old : ''}}"></input>
+												<input type="text" class="form-control" name="old" value="{{ isset($masochist) ? $masochist->old : ''}}"></input>
 											</div>
 											<div class="form-group">
-												<label>お姉さんの年齢</label>
-												<input type="text" class="form-control" name="wantold" value="{{ isset($wakamono) ? $wakamono->wantold : '' }}"></input>
+												<label>いじめてもらう人の年齢</label>
+												<input type="text" class="form-control" name="wantold" value="{{ isset($masochist) ? $masochist->wantold : '' }}"></input>
 											</div>
 											<div class="form-group">
 												<label>地域</label>
-<select class="form-control" name="area" value="{{ isset($wakamono) ? $wakamono->area : ''}}">
-<option value="{{ isset($wakamono) ? $wakamono->area : ''}}" selected>{{ isset($wakamono) ? $wakamono->area : '都道府県'}}</option>
+<select class="form-control" name="area" value="{{ isset($masochist) ? $masochist->area : ''}}">
+<option value="{{ isset($masochist) ? $masochist->area : ''}}" selected>{{ isset($masochist) ? $masochist->area : '都道府県'}}</option>
 <option value="北海道">北海道</option>
 <option value="青森県">青森県</option>
 <option value="岩手県">岩手県</option>
@@ -82,9 +82,9 @@
 											</div>
 											<div class="form-group">
 												<label>自己紹介・簡単な説明など</label>
-												<textarea class="form-control" name="description">{{ isset($wakamono) ? $wakamono->description : ''}}</textarea>
+												<textarea class="form-control" name="description">{{ isset($masochist) ? $masochist->description : ''}}</textarea>
 											</div>
-											<button type="submit" class="btn btn-primary">{{ $wakamono ? '更新' : '投稿' }}</button>
+											<button type="submit" class="btn btn-primary">{{ $masochist ? '更新' : '投稿' }}</button>
 										</form>
 									@else
 										<div>投稿するには、ログインしてください。</div>

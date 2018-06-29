@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWakamonosTable extends Migration
+class CreateSadistsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateWakamonosTable extends Migration
      */
     public function up()
     {
-        Schema::create('wakamonos', function (Blueprint $table) {
+        Schema::create('sadists', function (Blueprint $table) {
             $table->increments('id');
-						$table->string('username');
-						$table->integer('userid')->unique();
+						$table->integer('userid');
 						$table->integer('old');
-						$table->integer('wantold');
-						$table->string('area');
 						$table->string('description');
             $table->timestamps();
         });
@@ -32,6 +29,6 @@ class CreateWakamonosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('wakamonos');
+        Schema::dropIfExists('sadists');
     }
 }

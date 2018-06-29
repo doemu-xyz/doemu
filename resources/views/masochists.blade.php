@@ -6,12 +6,12 @@
         <div id="accordion" class="col-md-8">
         </div>
 						<div class="card-columns">
-						@foreach ($wakamonoList as $wakamono)
+						@foreach ($masochistList as $masochist)
             	<div class="card">
                 <div class="card-body">
-									<h5 class="card-title">{{ $wakamono->username }} ({{ $wakamono->old}}歳) 希望:{{ $wakamono->wantold }}歳</h5>
-									<h6 class="card-subtitle mb-2 text-muted">{{ $wakamono->area }}</h6>
-									<p class="card-text">{{ $wakamono->description }}</p>
+									<h5 class="card-title">{{ $masochist->username }} ({{ $masochist->old}}歳) 希望:{{ $masochist->wantold }}歳</h5>
+									<h6 class="card-subtitle mb-2 text-muted">{{ $masochist->area }}</h6>
+									<p class="card-text">{{ $masochist->description }}</p>
 								</div>
 							</div>
 						@endforeach

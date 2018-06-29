@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOneesansTable extends Migration
+class CreateMasochistsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateOneesansTable extends Migration
      */
     public function up()
     {
-        Schema::create('oneesans', function (Blueprint $table) {
+        Schema::create('masochists', function (Blueprint $table) {
             $table->increments('id');
-						$table->integer('userid');
+						$table->string('username');
+						$table->integer('userid')->unique();
 						$table->integer('old');
+						$table->integer('wantold');
+						$table->string('area');
 						$table->string('description');
             $table->timestamps();
         });
@@ -29,6 +32,6 @@ class CreateOneesansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('oneesans');
+        Schema::dropIfExists('masochists');
     }
 }

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class WakamonoSeeder extends Seeder
+class MasochistSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,13 +11,13 @@ class WakamonoSeeder extends Seeder
      */
     public function run()
     {
-			DB::table('wakamonos')->insert([
+			DB::table('masochists')->insert([
 				'username' => 'おのかちお',
 				'userid' => 1,
 				'old' => '17',
 				'wantold' => '26',
 				'area' => '東京都',
-				'description' => 'OLのお姉さんに養われたいです！！！！！！ twitter: @onokatio_',
+				'description' => 'OLのお姉さんにいじめられたいです！！！！！！ twitter: @onokatio_',
 			]);
 
     }

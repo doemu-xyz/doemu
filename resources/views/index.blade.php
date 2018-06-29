@@ -75,7 +75,7 @@
             }
         </style>
     </head>
-    <body style="background-image: url('/image/background.jpg')">
+    <body style="background-image: url('/image/background.jpg')">D
         <div id="cover" class="flex-center position-ref full-height">
                 <div class="top-right links">
                     @auth
@@ -87,15 +87,15 @@
                 </div>
             <div class="content">
                 <div class="title m-b-md">
-                    へそのお
+                    どえむ
                 </div>
 								<div class="m-b-md">
-									へそのおは、お姉さんに養われたい若者と、若者を養いたいお姉さんのマッチングサービスです。（※ジョークサイトです）
+                                    どえむは、いじめられたい人と、いじめたい人のマッチングサービスです。（※ジョークサイトです）
 								</div>
 
                 <div class="links">
-                    <a href="{{ route('young') }}">若者を探す（お姉さん向け）</a>
-                    <a href="{{ route('young-add') }}">若者として投稿する（若者向け）</a>
+                    <a href="{{ route('masochists') }}">マゾヒストを探す（サディスト向け）</a>
+                    <a href="{{ route('masochists-add') }}">マゾヒストとして投稿する（マゾヒスト向け）</a>
                 </div>
             </div>
         </div>

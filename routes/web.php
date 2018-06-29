@@ -17,7 +17,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/young', 'WakamonoController@index')->name('young');
-Route::get('/young/add', 'WakamonoController@add')->name('young-add');
+Route::get('/masochists', 'MasochistController@index')->name('masochists');
+Route::get('/masochists/add', 'MasochistController@add')->name('masochists-add');
 
-Route::post('/young', 'WakamonoController@store')->middleware('auth');
+Route::post('/masochists', 'MasochistController@store')->middleware('auth');
